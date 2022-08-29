@@ -1,0 +1,19 @@
+{
+  "name": "toy-compiler",
+  "version": "1.0.0",
+  "description": "⛄ A toy compiler based on https://github.com/jamiebuilds/the-super-tiny-compiler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [
+    "toy",
+    "compiler",
+    "TDD"
+  ],
+  "author": "bestkwanwa@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^0.22.1"
+  }
+}
