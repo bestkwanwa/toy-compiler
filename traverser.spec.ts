@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { NodeTypes, ProgramNode } from './parser';
+import { NodeTypes, ProgramNode } from './type';
 import { traverser, Visitor } from './traverser';
 
 test('traverser', () => {

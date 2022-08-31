@@ -1,6 +1,7 @@
 import { test, expect } from "vitest";
 import { TokenTypes } from './tokenizer';
-import { parser, NodeTypes } from './parser';
+import { parser } from './parser';
+import { NodeTypes } from './type';
 
 test('parser', () => {
     const tokens = [

@@ -1,6 +1,6 @@
-import { NodeTypes, ChildNode, CallExpressionNode, NumberNode, ProgramNode } from './parser';
+import { NodeTypes, ChildNode, CallExpressionNode, NumberLiteralNode, ProgramNode } from './type';
 
-type Child = ProgramNode | NumberNode | CallExpressionNode
+type Child = ProgramNode | NumberLiteralNode | CallExpressionNode
 type Parent = ProgramNode | CallExpressionNode | undefined
 
 interface VisitorMethods {

@@ -1,54 +1,9 @@
 import { Token, TokenTypes } from './tokenizer';
-
-export enum NodeTypes {
-    Program = "Program",
-    NumberLiteral = 'NumberLiteral',
-    CallExpression = 'CallExpression'
-}
-
-export type ChildNode = NumberNode | CallExpressionNode
-
-interface Node {
-    type: NodeTypes
-}
-
-export interface ProgramNode extends Node {
-    type: NodeTypes.Program
-    body: ChildNode[]
-}
-
-export interface CallExpressionNode extends Node {
-    type: NodeTypes.CallExpression
-    name: string,
-    params: ChildNode[]
-}
-
-export interface NumberNode extends Node {
-    type: NodeTypes.NumberLiteral
-    value: string
-}
-
-const generateProgramNode = (): ProgramNode => {
-    return {
-        type: NodeTypes.Program,
-        body: []
-    }
-}
-
-const generateNumberNode = (value: string): NumberNode => {
-    return {
-        type: NodeTypes.NumberLiteral,
-        value
-    }
-}
-
-const generateCallExpressionNode = (name: string): CallExpressionNode => {
-    return {
-        type: NodeTypes.CallExpression,
-        name,
-        params: []
-    }
-}
+import {
+    generateProgramNode,
+    generateNumberNode,
+    generateCallExpressionNode
+} from './type';
 
 export function parser(tokens: Token[]) {
     let current = 0
