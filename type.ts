@@ -2,6 +2,9 @@ export enum NodeTypes {
     NumberLiteral = "NumberLiteral",
     Program = "Program",
     CallExpression = "CallExpression",
+
+    ExpressionStatement = 'ExpressionStatement',
+    Identifier = 'Identifier'
 }
 
 export type ChildNode =
@@ -15,7 +18,7 @@ export interface Node {
 export interface ProgramNode extends Node {
     body: ChildNode[];
     type: NodeTypes.Program;
-    context?: ChildNode[];
+    context?: any[];
 }
 
 export interface NumberLiteralNode extends Node {
@@ -27,7 +30,7 @@ export interface CallExpressionNode extends Node {
     name: string;
     params: ChildNode[];
     type: NodeTypes.CallExpression;
-    context?: ChildNode[];
+    context?: any[];
 }
 
 export function generateProgramNode(): ProgramNode {

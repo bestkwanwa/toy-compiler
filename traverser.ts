@@ -5,7 +5,7 @@ type Parent = ProgramNode | CallExpressionNode | undefined
 
 interface VisitorMethods {
     enter(node: Child, parent: Parent)
-    exit(node: Child, parent: Parent)
+    exit?(node: Child, parent: Parent)
 }
 
 export interface Visitor {
