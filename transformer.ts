@@ -21,7 +21,7 @@ export interface TransformedCallExpression {
 }
 
 export function transformer(ast: ProgramNode) {
-    const newAst = {
+    const newAst: TransformedProgramNode = {
         type: NodeTypes.Program,
         body: []
     }
